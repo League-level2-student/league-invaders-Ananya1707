@@ -4,6 +4,7 @@ public class LeagueInvaders {
 	JFrame frame;
 	public static final int WIDTH = 500;
 	public static final int HEIGHT = 800;
+	GamePanel panel;
 	public static void main(String[] args) {
 		LeagueInvaders game  = new LeagueInvaders();
 		game.setup();
@@ -11,12 +12,15 @@ public class LeagueInvaders {
 	
 	LeagueInvaders(){
 		frame = new JFrame();
+		panel = new GamePanel();
 		
 	}
 	
 	void setup() {
+		frame.add(panel);
 		frame.setSize(WIDTH,HEIGHT);
 		frame.setVisible(true);
+		frame.addKeyListener(panel);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 	}
