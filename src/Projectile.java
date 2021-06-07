@@ -15,10 +15,13 @@ public class Projectile extends GameObject {
 		if (needImage) {
 		    loadImage ("bullet.png");
 		}
+
 	}
 	
 	void update() {
 		y -= speed;
+        super.update();
+
 		
 	}
 	
