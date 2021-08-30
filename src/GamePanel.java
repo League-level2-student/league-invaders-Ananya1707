@@ -37,6 +37,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 	    if (needImage) {
 	        loadImage ("space.png");
 	    }
+	    
 
 		
 	}
